@@ -743,7 +743,7 @@ static PyObject* PamXAuthData_new(
   static char*		kwlist[] = {"name", "data", 0};
 
   err = PyArg_ParseTupleAndKeywords(
-      args, kwds, "SS:XAuthData", kwlist,
+      args, kwds, "OO:XAuthData", kwlist,
       &name, &data);
   if (!err)
     goto error_exit;
