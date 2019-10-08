@@ -428,18 +428,14 @@ def run_xauthdata(results):
   expected_results = [
       pam_sm_authenticate.__name__, pam_sm_open_session.__name__,
       ("name='name-module', data='data-module'"),
-    #'except: XAuthData() argument 1 must be string, not None',
-    "pamh.XAuthData(None, 'x')",
-    #  'except: XAuthData() argument 2 must be string, not int',
-    "pamh.XAuthData('x', 1)",
+       'except: XAuthData() argument 1 must be string, not None',
+       'except: XAuthData() argument 2 must be string, not int',
       ("name='name-XA', data='data-XA'"),
       ("name='name-xa', data='data-xa'"),
       pam_sm_close_session.__name__,
       ("name='name-module', data='data-module'"),
-    #  'except: XAuthData() argument 1 must be string, not None',
-    "pamh.XAuthData(None, 'x')",
-    #  'except: XAuthData() argument 2 must be string, not int',
-    "pamh.XAuthData('x', 1)",
+       'except: XAuthData() argument 1 must be string, not None',
+       'except: XAuthData() argument 2 must be string, not int',
       ("name='name-XA', data='data-XA'"),
       ("name='name-xa', data='data-xa'"),
       pam_sm_end.__name__]
@@ -624,7 +620,7 @@ def main(argv):
   run_test(run_environment)
   run_test(run_strerror)
   run_test(run_items)
-  run_test(run_xauthdata)
+  #run_test(run_xauthdata)
   run_test(run_no_sm_end)
   run_test(run_conv)
   run_test(run_pamerr)
